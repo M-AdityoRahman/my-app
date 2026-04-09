@@ -7,7 +7,7 @@ import fetcher from "../../utils/swr/fetcher";
 // const fetcher = (url : string) => fetch(url).then((res) => res.json());
 const kategori = () => {
   // const [isLogin, setIsLogin] = useState(false);
-  // const { push } = useRouter();
+  const { push } = useRouter();
   const [products, setProducts] = useState([]);
   // const [loading, setLoading] = useState(false);
 
