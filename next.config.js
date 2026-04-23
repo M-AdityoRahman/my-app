@@ -2,9 +2,22 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "lh3.googleusercontent.com",      // Google avatar
-      "avatars.githubusercontent.com",   // GitHub avatar
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "is4.fwrdassets.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 }

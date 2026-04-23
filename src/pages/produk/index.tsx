@@ -1,10 +1,18 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import TampilanProduk from "../../views/produk";
 import useSWR from "swr";
 import fetcher from "../../utils/swr/fetcher";
+import dynamic from "next/dynamic";
 
 // const fetcher = (url : string) => fetch(url).then((res) => res.json());
+
+const TampilanProduk = dynamic(
+  () => import("../../views/produk"),
+  {
+    loading: () => <p>Memuat produk...</p>, // fallback saat komponen belum siap
+    ssr: false, // komponen hanya dirender di sisi client
+  }
+);
 const kategori = () => {
   // const [isLogin, setIsLogin] = useState(false);
   const { push } = useRouter();
