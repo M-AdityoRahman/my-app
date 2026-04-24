@@ -47,7 +47,7 @@ const kategori = () => {
 
   return (
     <div>
-      <TampilanProduk products={isLoading ? [] : data.data} /> {/* Kondisi yang membuat skeleton muncul*/}
+      <TampilanProduk products={isLoading ? [] : data?.data} /> {/* Kondisi yang membuat skeleton muncul*/}
     </div>
   );
 };

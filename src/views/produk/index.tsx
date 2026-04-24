@@ -17,9 +17,9 @@ function formatPrice(price: number): string {
 const TampilanProduk = ({ products }: { products: ProductType[] }) => {
   return (
     <div className={styles.produk}>
-      <h1 className={styles.produk__title}>Daftar Produk</h1>
+      <h1 data-testid="title" className={styles.produk__title}>Daftar Produk</h1> 
       <div className={styles.produk__content}>
-        {products.length > 0 ? (
+        {products?.length > 0 ? (
           <>
             {products.map((products: ProductType) => (
               <Link href={`/produk/${products.id}`} key={products.id} className={styles.produk__content__item} >
@@ -39,7 +39,7 @@ const TampilanProduk = ({ products }: { products: ProductType[] }) => {
             ))}
           </>
         ) : (
-          <div className={styles.produk__content__skeleton}>
+          <div data-testid="skeleton" className={styles.produk__content__skeleton}>
             <div className={styles.produk__content__skeleton__image}></div>
             <div className={styles.produk__content__skeleton__name}></div>
             <div className={styles.produk__content__skeleton__category}></div>
