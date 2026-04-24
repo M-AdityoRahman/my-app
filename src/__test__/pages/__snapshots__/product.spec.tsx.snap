@@ -1,58 +1,24 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Product Page should match snapshot 1`] = `
+exports[`Product Page matches snapshot 1`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="produk"
+  <div
+    data-testid="product-page"
+  >
+    <h1
+      data-testid="title"
     >
-      <h1
-        class="produk__title"
-        data-testid="title"
+      Daftar Produk
+    </h1>
+    <div
+      data-testid="tampilan-produk"
+    >
+      <p
+        data-testid="empty-state"
       >
-        Daftar Produk
-      </h1>
-      <div
-        class="produk__content"
-      >
-        <a
-          class="produk__content__item"
-          href="/produk/1"
-        >
-          <div
-            class="produk__content__item__image"
-          >
-            <img
-              alt="Produk Test"
-              data-nimg="1"
-              decoding="async"
-              height="300"
-              loading="lazy"
-              src="/_next/image?url=%2Ftest.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Ftest.jpg&w=256&q=75 1x, /_next/image?url=%2Ftest.jpg&w=640&q=75 2x"
-              style="color: transparent;"
-              width="200"
-            />
-          </div>
-          <h4
-            class="produk__content__item__name"
-          >
-            Produk Test
-          </h4>
-          <p
-            class="produk__content__item__category"
-          >
-            Test
-          </p>
-          <p
-            class="produk__content__item__price"
-          >
-            Rp 10.000
-          </p>
-        </a>
-      </div>
+        Tidak ada produk
+      </p>
     </div>
-     
   </div>
 </DocumentFragment>
 `;
